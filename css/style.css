@@ -18,7 +18,7 @@ body {
   animation: none;
 }
 .ripple.active {
-  animation: ripple 2s linear infinite;
+  animation: ripple 1s cubic-bezier(0.8, 0.01, 0.6, 1) infinite;
 }
 #timer {
   font-size: 2em;
@@ -50,8 +50,26 @@ ul {
       0 0 0 5rem rgba(255, 255, 255, 0.01);
   }
   100% {
-    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.01),
-      0 0 0 2rem rgba(255, 255, 255, 0.01), 0 0 0 5rem rgba(255, 255, 255, 0.01),
+    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.02),
+      0 0 0 2rem rgba(255, 255, 255, 0.02), 0 0 0 5rem rgba(255, 255, 255, 0.02),
       0 0 0 8rem rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0.01),
+      0 0 0 1rem rgba(255, 255, 255, 0.01), 0 0 0 2rem rgba(255, 255, 255, 0.01),
+      0 0 0 5rem rgba(255, 255, 255, 0.01);
+  }
+  70% {
+    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.1),
+      0 0 0 2rem rgba(255, 255, 255, 0.1), 0 0 0 5rem rgba(255, 255, 255, 0.1),
+      0 0 0 8rem rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0.01),
+      0 0 0 1rem rgba(255, 255, 255, 0.01), 0 0 0 2rem rgba(255, 255, 255, 0.01),
+      0 0 0 5rem rgba(255, 255, 255, 0.01);
   }
 }
